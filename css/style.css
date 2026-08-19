@@ -155,7 +155,7 @@ button{ font-family:inherit; cursor:pointer; }
 .brand img.mark{
   width:83px; height:83px; 
   /* border-radius:12px; */
-   background:#b1a6a600; 
+   background:#b1a6a600 !important; 
   padding:4px; box-sizing:border-box;
   object-fit:contain; display:block;
    flex-shrink:0;
