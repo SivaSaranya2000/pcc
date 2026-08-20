@@ -54,7 +54,7 @@ h1,h2,h3,h4,.display-font{
   backdrop-filter:blur(10px);
   box-shadow:0 6px 24px rgba(7,26,51,.25);
 }
-.brand-marks{
+.brand-mark{
   display:flex;align-items:center;gap:10px;
   font-family:'Space Grotesk',sans-serif;
   font-weight:700;font-size:1.15rem;color:var(--white)!important;
