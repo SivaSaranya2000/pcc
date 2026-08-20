@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* FIX 2: when a dropdown child link is clicked,
-       mark the parent nav-link as active (color highlight) */
+       marks the parent nav-link as active (color highlight) */
     const dropdownLinks = parent.querySelectorAll('.dropdown a');
     dropdownLinks.forEach(link => {
       link.addEventListener('click', () => {
