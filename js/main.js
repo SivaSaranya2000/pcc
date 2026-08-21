@@ -295,3 +295,51 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+/* ---- Hero slideshow (Home page) ---- */
+const slideshow = document.querySelector('.hero-slideshow');
+if(slideshow){
+  const slides = Array.from(slideshow.querySelectorAll('.slide'));
+  const dotsWrap = slideshow.querySelector('.slideshow-dots');
+  const prevBtn = slideshow.querySelector('.slideshow-arrow.prev');
+  const nextBtn = slideshow.querySelector('.slideshow-arrow.next');
+  let current = 0;
+  let timer = null;
+  const AUTO_MS = 6000;
+
+  if(dotsWrap){
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      if(i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    });
+  }
+
+  function render(){
+    slides.forEach((s, i) => s.classList.toggle('active', i === current));
+    if(dotsWrap){
+      Array.from(dotsWrap.children).forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+  }
+  function goTo(i){
+    current = (i + slides.length) % slides.length;
+    render();
+    resetTimer();
+  }
+  function next(){ goTo(current + 1); }
+  function prev(){ goTo(current - 1); }
+
+  function resetTimer(){
+    clearInterval(timer);
+    timer = setInterval(next, AUTO_MS);
+  }
+
+  if(nextBtn) nextBtn.addEventListener('click', next);
+  if(prevBtn) prevBtn.addEventListener('click', prev);
+  slideshow.addEventListener('mouseenter', () => clearInterval(timer));
+  slideshow.addEventListener('mouseleave', resetTimer);
+
+  render();
+  resetTimer();
+}

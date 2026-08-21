@@ -168,6 +168,33 @@
     transform: translateX(-50%);
   }
 }
+@media (max-width: 900px) {
+  .slideshow-arrow {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    z-index: 30;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+
+  .slideshow-arrow.prev {
+    left: 12px;
+    right: auto;
+  }
+
+  .slideshow-arrow.next {
+    right: 12px;
+    left: auto;
+  }
+}
   </style>
 
 </head>
@@ -286,7 +313,7 @@
   <section class="hero-slideshow" aria-label="Featured programs slideshow">
 <div class="slide active">
       <div class="hero-image">
-        <img src="images/autocad.png" alt="IT training">
+        <img src="images/autoban1.png" alt="IT training">
       </div>
 
       <div class="hero-copy">
@@ -295,7 +322,8 @@
           <span>AutoCAD  2D </span>
           <span class="accent-line">&amp; 3D Course</span>
         </h1>
-        <p class="lede">Learn 2D drafting and 3D design using AutoCAD , with practical training in technical drawings, layouts, and engineering designs.</p>
+        <p class="lede">
+         We provide professional training in AutoCAD 2D & 3D, MEP, Revit, 3ds Max, SketchUp, and SolidWorks. Our courses focus on practical, industry-oriented training to help students develop strong design skills and career opportunities.</p>
         <div class="hero-actions">
           <a href="auto-cad.html" class="btn btn-primary">Explore Courses
             <svg viewBox="0 0 16 16" fill="none">
@@ -458,20 +486,18 @@
         </div>
         <div class="alt-copy">
           <!-- <div class="eyebrow">Track 03</div> -->
-          <h3>AutoCAD  2D &3D Course</h3>
+          <h3 style="color: #0B2545 !important;">Design Courses</h3>
           <div class="alt-meta"><span>20 Programs</span><span>Certification</span><span>Certified</span></div>
-          <p>Master AutoCAD  2D & 3D design with practical, industry-focused training. Learn from experienced CAD
-            professionals through hands-on projects and real-time drafting exercises, suitable for students, engineers,
-            architects, and working professionals.</p>
+          <p>Master AutoCAD 2D & 3D, MEP, Revit, 3ds Max, SketchUp, and SolidWorks through practical, industry-focused training. Learn from experienced design professionals through hands-on projects and real-time design exercises, suitable for students, engineers, architects, and working professionals.</p>
           <ul class="tick-list">
             <li><svg viewBox="0 0 24 24" fill="none">
                 <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                   stroke-linejoin="round" />
-              </svg>Hands-on AutoCAD  2D & 3D Practical Training, Not Just Theory.</li>
+              </svg>Hands-on AutoCAD  2D & 3D ,AutoCAD 2D & 3D, MEPPractical Training, Not Just Theory.</li>
             <li><svg viewBox="0 0 24 24" fill="none">
                 <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                   stroke-linejoin="round" />
-              </svg>Practical AutoCAD  2D & 3D Training with Live Design Projects.</li>
+              </svg>Practical AutoCAD  2D & 3D ,AutoCAD 2D & 3D, MEP Training with Live Design Projects.</li>
           </ul>
           <a href="auto-cad.html" class="btn btn-primary" style="margin-top:26px;">View More
             <svg viewBox="0 0 16 16" fill="none">
@@ -773,7 +799,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <span class="brand brand-logo-only"><img src="images/pcc-logo.jpeg" alt="PCC Academy" class="mark"></span>
+          <span class="brand brand-logo-only"><img src="images/logo/logo1.1.jpeg" alt="PCC Academy" class="mark"></span>
           <p class="about">A Training Institute offering IT Courses, Engineering Project Training, and Professional
             AutoCAD  2D & 3D Courses.</p>
           <div class="social-row">
